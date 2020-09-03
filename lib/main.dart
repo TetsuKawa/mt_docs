@@ -8,7 +8,6 @@ import 'package:flutter_pdfmaker/db_provider.dart';
 import 'package:flutter_pdfmaker/pdf_view_page.dart';
 import 'package:flutter_pdfmaker/textform.dart';
 
-
 void main() {
   runApp(MyApp());
 }
