@@ -92,6 +92,8 @@ class _AddPdfPageState extends State<AddPdfPage> {
     });
   }
 
+
+
   _checkCameraPermissionStatus() {
     switch (_permissionCameraStatus) {
       case PermissionStatus.undetermined:
