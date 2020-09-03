@@ -1,6 +1,6 @@
-
 import 'dart:typed_data';
-import 'package:flutter_share/flutter_share.dart';
+
+import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfmaker/db_provider.dart';
@@ -54,17 +54,12 @@ class _PdfViewPageState extends State<PdfViewPage> {
             if(widget.data.file == ""){
               widget.data.file = "notitle";
             }
-//            Uint8List _buffer = await File(widget.filePath).readAsBytes();
-//            Share.file(
-//                "計画書ファイルを共有",
-//                "${widget.data.file}.pdf",
-//                _buffer,
-//                "image/pdf"
-//            );
-            await FlutterShare.shareFile(
-              title: widget.data.file,
-              text: widget.data.date,
-              filePath: widget.filePath,
+            Uint8List _buffer = await File(widget.filePath).readAsBytes();
+            Share.file(
+                "計画書ファイルを共有",
+                "${widget.data.file}.pdf",
+                _buffer,
+                "image/pdf"
             );
           },
         ),
